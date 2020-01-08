@@ -28,13 +28,11 @@ export default class Home extends Component {
     renderItem = ({ item }) => (
         <View style={styles.containerItem}>
             <View style={styles.card}>
-                <Image source={{ uri: item.urlFoto }} style={{ height: 199, width: 160 }} />
+                <Image source={{ uri: item.urlFoto }} style={{ height: 120, width: 90, marginLeft: 5 }} />
                 <View style={styles.info}>
                     <Text style={styles.txtInf}> {item.nome} </Text>
                     <Text style={styles.txtInf}> Partido: {item.siglaPartido} </Text>
                     <Text style={styles.txtInf}> Estado: {item.siglaUf} </Text>
-                    <Text style={styles.txtInf}> {item.email} </Text>
-
                 </View>
             </View>
         </View>
@@ -56,7 +54,7 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: '#dbd2c8',
+        backgroundColor: '#ccc',
     },
 
     containerItem: {
@@ -66,21 +64,24 @@ const styles = StyleSheet.create({
     card: {
         flex: 1,
         flexDirection: 'row',
-        height: 200,
+        height: 130,
         width: null,
-        margin: 10,
+        marginTop: 10,
+        marginHorizontal: 10,
         backgroundColor: '#fff',
-        borderRadius: 5
+        borderRadius: 5,
+        alignItems: 'center'
     },
 
     info: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'space-between'
+        justifyContent: 'space-around'
     },
 
     txtInf: {
         fontWeight: 'bold',
+        fontSize: 20
     }
 
 
